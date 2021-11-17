@@ -28,7 +28,7 @@ function App() {
  }, []);
 
   const infoBtnToggleRef = useRef();
-  
+
   if(!starships.length) return (<h1>...</h1>);
   //if(!movieList.length) return (<h1>...</h1>);
 

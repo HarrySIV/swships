@@ -4,7 +4,7 @@ import styles from './InfoBtn.module.css';
 const InfoBtn = props => {
 const [isClicked, setIsClicked] = useState(false);
    const infoBtnClickHandler = () => {
-     const container = document.getElementById(props.ships.id);
+     const container = document.getElementById(`${props.ships.edited}`);
      if (!isClicked) {
        container.style.height = "24rem"; 
        setIsClicked(true);
@@ -15,7 +15,7 @@ const [isClicked, setIsClicked] = useState(false);
    }
 
    return (
-      <button className={styles.showInfo} onClick={infoBtnClickHandler}>-></button>
+      <button className={styles.showInfo} onClick={infoBtnClickHandler}>Show Ship Info</button>
    )
 }
 
