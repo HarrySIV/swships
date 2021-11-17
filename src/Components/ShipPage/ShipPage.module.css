@@ -1,0 +1,11 @@
+.model {
+   justify-content: center;
+   width: 80vh;
+}
+
+.shippage {
+   flex: auto;
+   flex-direction: row;
+}
+
+
