@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './App.module.css';
 import ShipPage from './Components/ShipPage/ShipPage';
 import ShipInfo from './Components/ShipInfo/ShipInfo';
 import InfoBtn from './Components/ShipPage/InfoBtn';
 import SearchBar from './Components/SearchBar/SearchBar';
-//import MovieInfo from './Components/MovieInfo/MovieInfo';
+import MovieInfo from './Components/MovieInfo/MovieInfo';
 
 function App() {
   const [starships, setStarships] = useState([]);
@@ -45,11 +45,13 @@ function App() {
     <>
       <SearchBar onChange={searchQueryHandler} />
       {filteredStarship.map(ships => (
-        <div className={styles.container} key={ships.created} id={ships.edited}>
-          <ShipPage ships={ships} />
-          <InfoBtn ships={ships}/>
-          {/*<MovieInfo ships={ships} movies={movieList} /> */}
-          <ShipInfo ships={ships} />
+        <div className={styles.ships}>
+          <div className={styles.container} key={ships.created} id={ships.edited}>
+            <ShipPage ships={ships} />
+            <InfoBtn ships={ships}/>
+            <ShipInfo ships={ships} />
+          </div>
+          <MovieInfo ships={ships} movies={movieList} />
         </div>
       ))}
     </>

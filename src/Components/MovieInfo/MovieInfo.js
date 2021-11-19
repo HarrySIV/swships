@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import styles from './MovieInfo.module.css';
 
 const MovieInfo = props => {
    const [shipInFilm, setShipInFilm] = useState([]);
-   const [filteredMovieList, setFilteredMovieList] = useState([]);
 
-
+useEffect(() => {
    const getMovies = () => {
       const filmId = { films: props.ships.films.map( url => parseInt(url[28])) };
       for (let id of filmId.films) {
@@ -20,15 +20,13 @@ const MovieInfo = props => {
       } 
    }
    getMovies();
+}, [])
 
    return (
-      <div>
+      <div className={styles.movieInfo} id={`${props.ships.created}_movies`}>
          <h2>As Seen In: </h2>
          {shipInFilm.map(movieName => (
-            <>
-               <h3 className="title">{movieName.title}</h3> 
-               <h5>Released: {movieName.release_date}</h5>
-            </>
+               <h3 className="title">{movieName}</h3> 
          ))}
       </div>
    )

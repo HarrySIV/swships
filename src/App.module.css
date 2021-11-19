@@ -1,5 +1,6 @@
 body {
   background-color: black;
+  max-width: fit-content;
 }
 
 
@@ -36,13 +37,33 @@ h1, h2, h3, h4, h5 {
 
 .container {
   overflow: hidden;
-  height: 17.45rem;
   background-color: rgba(0, 0, 0, 0.8);
   border: 1px solid white;
   border-radius: 1rem;
-  width: 45rem;
+  height: 17.45rem;
+  width: 44rem;
   align-items: center;
-  margin: 5vh auto;
+  margin: 5vh 1rem 5vh 1rem;
 }
 
+.ships {
+  display: flex;
+  flex: auto;
+  flex-direction: row;
+}
+
+@media (max-width: 812px) {
+  body {
+    width: 90%;
+  }
+  .container {
+    display: inline-block;
+    width: 20rem;
+    overflow: scroll;
+  }
+  
+  
+
+
+}
 
