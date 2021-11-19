@@ -3,6 +3,7 @@ import styles from './App.module.css';
 import ShipPage from './Components/ShipPage/ShipPage';
 import ShipInfo from './Components/ShipInfo/ShipInfo';
 import InfoBtn from './Components/ShipPage/InfoBtn';
+import SearchBar from './Components/SearchBar/SearchBar';
 //import MovieInfo from './Components/MovieInfo/MovieInfo';
 
 function App() {
@@ -27,15 +28,23 @@ function App() {
     fetchMovieInfo();
  }, []);
 
-  const infoBtnToggleRef = useRef();
-
   if(!starships.length) return (<h1>...</h1>);
   //if(!movieList.length) return (<h1>...</h1>);
 
+  //setStudents to a new array of filteredStudents
+  const searchQueryHandler = text => {
+    if (text) {
+      const searchQuery = starships.filter(newFilteredStarships => {
+      return newFilteredStarships.model.toLowerCase().includes(text.toLowerCase());
+      })
+      setFilteredStarships(searchQuery);
+    } else if (!text) { return setFilteredStarships(starships);}
+  }
 
   return (
     <>
-      {starships.map(ships => (
+      <SearchBar onChange={searchQueryHandler} />
+      {filteredStarship.map(ships => (
         <div className={styles.container} key={ships.created} id={ships.edited}>
           <ShipPage ships={ships} />
           <InfoBtn ships={ships}/>

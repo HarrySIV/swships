@@ -1,11 +1,7 @@
 .model {
-   justify-content: center;
+   justify-content: left;
    width: 80vh;
 }
 
-.shippage {
-   flex: auto;
-   flex-direction: row;
-}
 
 

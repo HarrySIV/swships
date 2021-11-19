@@ -1,0 +1,13 @@
+
+.input {
+   background-color: black;
+   width: 100%;
+   border: none;
+   color: yellow;
+   padding: 0.5rem;
+   font-weight: 100;
+}
+
+.input:focus {
+   outline: none;
+}
