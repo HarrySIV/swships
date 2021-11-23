@@ -28,8 +28,7 @@ function App() {
     fetchMovieInfo();
  }, []);
 
-  if(!starships.length) return (<h1>...</h1>);
-  //if(!movieList.length) return (<h1>...</h1>);
+  if(!starships.length) return (<h1>...</h1>);;
 
   //setStudents to a new array of filteredStudents
   const searchQueryHandler = text => {
