@@ -1,12 +1,10 @@
 import styles from './ShipPage.module.css';
-import ShowMovieBtn from '../MovieInfo/ShowMovieBtn';
 
 const ShipPage = props => {
 
    return (
       <div className={styles.shippage}>
                <h1 className={styles.model}>{props.ships.model}</h1>
-               <ShowMovieBtn ships={props.ships} />
                <hr />
                <h3 className="shipClass">Class: {props.ships.starship_class}</h3>
                <h3 className="manufacturer">Manufacturer: {props.ships.manufacturer}</h3>
