@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/swships/static/css/main.df4f5515.chunk.css",
-    "main.js": "/swships/static/js/main.ec2a61d7.chunk.js",
-    "main.js.map": "/swships/static/js/main.ec2a61d7.chunk.js.map",
+    "main.css": "/swships/static/css/main.18a5c308.chunk.css",
+    "main.js": "/swships/static/js/main.ec748cbe.chunk.js",
+    "main.js.map": "/swships/static/js/main.ec748cbe.chunk.js.map",
     "runtime-main.js": "/swships/static/js/runtime-main.858f62e1.js",
     "runtime-main.js.map": "/swships/static/js/runtime-main.858f62e1.js.map",
-    "static/js/2.1d7cb4e7.chunk.js": "/swships/static/js/2.1d7cb4e7.chunk.js",
-    "static/js/2.1d7cb4e7.chunk.js.map": "/swships/static/js/2.1d7cb4e7.chunk.js.map",
+    "static/js/2.514af549.chunk.js": "/swships/static/js/2.514af549.chunk.js",
+    "static/js/2.514af549.chunk.js.map": "/swships/static/js/2.514af549.chunk.js.map",
     "index.html": "/swships/index.html",
-    "static/css/main.df4f5515.chunk.css.map": "/swships/static/css/main.df4f5515.chunk.css.map",
-    "static/js/2.1d7cb4e7.chunk.js.LICENSE.txt": "/swships/static/js/2.1d7cb4e7.chunk.js.LICENSE.txt"
+    "static/css/main.18a5c308.chunk.css.map": "/swships/static/css/main.18a5c308.chunk.css.map",
+    "static/js/2.514af549.chunk.js.LICENSE.txt": "/swships/static/js/2.514af549.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.858f62e1.js",
-    "static/js/2.1d7cb4e7.chunk.js",
-    "static/css/main.df4f5515.chunk.css",
-    "static/js/main.ec2a61d7.chunk.js"
+    "static/js/2.514af549.chunk.js",
+    "static/css/main.18a5c308.chunk.css",
+    "static/js/main.ec748cbe.chunk.js"
   ]
 }
