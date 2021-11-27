@@ -4,15 +4,30 @@ import ShipPage from './Components/ShipPage/ShipPage';
 import ShipInfo from './Components/ShipInfo/ShipInfo';
 import InfoBtn from './Components/ShipPage/InfoBtn';
 import SearchBar from './Components/SearchBar/SearchBar';
+import axios from 'axios';
 
 function App() {
   const [starships, setStarships] = useState([]);
   const [filteredStarship, setFilteredStarships] = useState([]);
   useEffect(() => {
     const fetchStarships = () => {
-      fetch('https://swapi.dev/api/starships')
-      .then(response => response.json())
-      .then(data => setStarships(data.results));
+      axios.get('https://swapi.dev/api/starships')
+      .then(res => setStarships(res.data.results))
+      .catch(function (error) {
+        if (error.response) {
+          console.log(error.response.data);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+        } else if (error.request) {
+          console.log(error.request);
+        } else {
+          console.log('Error', error.message);
+        }
+        console.log(error.config);
+      });
+      // fetch('https://swapi.dev/api/starships')
+      // .then(response => response.json())
+      // .then(data => setStarships(data.results));
     }
   fetchStarships();
   }, []);
@@ -37,8 +52,8 @@ function App() {
     <>
       <SearchBar onChange={searchQueryHandler} />
       {filteredStarship.map(ships => (
-        <div className={styles.ships}>
-          <div className={styles.container} key={ships.created} id={ships.edited}>
+        <div className={styles.ships} key={ships.created}>
+          <div className={styles.container} id={ships.edited}>
             <ShipPage ships={ships} />
             <InfoBtn ships={ships}/>
             <ShipInfo ships={ships} />
