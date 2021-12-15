@@ -25,9 +25,6 @@ function App() {
         }
         console.log(error.config);
       });
-      // fetch('https://swapi.dev/api/starships')
-      // .then(response => response.json())
-      // .then(data => setStarships(data.results));
     }
   fetchStarships();
   }, []);
